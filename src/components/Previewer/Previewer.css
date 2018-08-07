@@ -1,0 +1,35 @@
+#Preview-Title{
+  font-family: ArialMT;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+#Preview-Circle{
+  background: #FF9100;
+  border: 1px solid #FFFFFF;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+}
+
+#Preview-Area{
+  height: 80vh;
+  width: 40vw;
+  background: #DCDCDC;
+  border: 3px solid #FFFFFF;
+}
+
+#Preview-Bar{
+  height: 30px;
+  background: #222122;
+  border-left: 1px solid #FFFFFF;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#Preview-Max-Icon{
+  height: 20px;
+}

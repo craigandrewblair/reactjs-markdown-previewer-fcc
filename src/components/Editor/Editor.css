@@ -1,0 +1,36 @@
+#Editor-Area{
+  height: 80vh;
+  width: 40vw;
+  background: #DCDCDC;
+  border: 3px solid #FFFFFF;
+}
+
+#Editor-Bar{
+  height: 30px;
+  background: #222122;
+  border-right: 1px solid #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#Editor-Circle{
+  background: #85FF00;
+  border: 1px solid #FFFFFF;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+}
+
+#Editor-Title{
+  font-family: ArialMT;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+#Editor-Max-Icon{
+  height: 20px;
+}
+
