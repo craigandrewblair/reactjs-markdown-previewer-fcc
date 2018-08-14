@@ -1,6 +1,7 @@
 import React from 'react'
 import './Previewer.css';
 import PreviewMaxIcon from '../../images/Preview-Max-Icon.png';
+import marked from 'marked';
 
 const previewer = (props) => {
     
@@ -10,7 +11,7 @@ const previewer = (props) => {
           <div id='Preview-Circle'></div>
           <img id='Preview-Max-Icon' src={PreviewMaxIcon}/>
         </div>
-        <div id='preview'>{props.markdown}</div>
+        <div id='preview' dangerouslySetInnerHTML = {{__html: marked(props.markdown)}}></div>
       </div>
     );
   }
