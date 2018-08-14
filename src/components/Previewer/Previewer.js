@@ -8,7 +8,9 @@ const previewer = (props) => {
       <div id='Preview-Area'>
         <div id='Preview-Bar'>
           <div id='Preview-Circle'></div>
-          <img id='Preview-Max-Icon' src={PreviewMaxIcon}/></div>
+          <img id='Preview-Max-Icon' src={PreviewMaxIcon}/>
+        </div>
+        <div id='preview'>{props.markdown}</div>
       </div>
     );
   }

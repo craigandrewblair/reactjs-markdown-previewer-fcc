@@ -32,3 +32,9 @@ font-family: ArialMT;
 font-size: 18px;
 color: #FFFFFF;
 }
+
+#editor{
+  width: 497px;
+  height: 527px;
+  background: #DCDCDC;
+}
