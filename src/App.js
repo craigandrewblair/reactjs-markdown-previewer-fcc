@@ -9,44 +9,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      markdown: marked(placeholder)
-    }
-  }
-  
-
-  editorInputHandler = (event) => {
-    this.setState({
-      markdown: event.target.value
-    });
-    console.log(this.state.markdown);
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <div id='Main-Title'>Markdown Previewer</div>
-        <div id='Viewer'>
-          <Editor onChange={this.editorInputHandler}/>
-          <Previewer markdown={this.state.markdown} renderer={this.renderer} marked={this.marked}/>
-        </div>
-        <div id='Name-Date'>Craig Blair &copy; 2018</div>  
-      </div>
-    );
-  }
-}
-
-marked.setOptions({
-  breaks: true,
-});
-
-const renderer = new marked.Renderer();
-const linkRenderer = renderer.link;
-renderer.link = (href, title, text) => {
-    const html = linkRenderer.call(renderer, href, title, text);
-    return html.replace(/^<a /, '<a target="_blank" rel="nofollow" ');
-};
-
-const placeholder = 
+      markdown:
 `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
@@ -93,5 +56,45 @@ And here. | Okay. | I think we get it.
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 `
+    }
+  }
+  
+  editorInputHandler = (event) => {
+    this.setState({
+      markdown: event.target.value
+    });
+    console.log(this.state.markdown);
+  }
+
+  markupConvertor = () => {
+
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div id='Main-Title'>Markdown Previewer</div>
+        <div id='Viewer'>
+          <Editor onChange={this.editorInputHandler} markdown={this.state.markdown}/>
+          <Previewer markdown={this.state.markdown} renderer={this.renderer}/>
+        </div>
+        <div id='Name-Date'>Craig Blair &copy; 2018</div>  
+      </div>
+    );
+  }
+  
+}
+
+marked.setOptions({
+  breaks: true,
+});
+
+const renderer = new marked.Renderer();
+const linkRenderer = renderer.link;
+renderer.link = (href, title, text) => {
+    const html = linkRenderer.call(renderer, href, title, text);
+    return html.replace(/^<a /, '<a target="_blank" rel="nofollow" ');
+};
+
 
 export default App;
